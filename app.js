@@ -66,10 +66,10 @@ addNewList ( "New List Item");
 
 
 function changeBg (htmlElement, bgColor) {
-    let selectElement = document.getElementsByTagName ("div");
+    let selectElement = document.getElementsByTagName (htmlElement);
    
-    selectElement[0].style.backgroundColor = "green";
+    selectElement[0].style.backgroundColor = bgColor;
 
 }
 
-changeBg ("h1", "green"); 
+changeBg ("div", "green"); 
