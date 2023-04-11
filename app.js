@@ -73,3 +73,41 @@ function changeBg (htmlElement, bgColor) {
 }
 
 changeBg ("div", "green"); 
+
+// Qestion 6
+//Write a function that saves an object to localStorage. The function should
+//take two arguments: the first argument is a string representing the key to
+//use for storing the object, and the second argument is the object to store.
+
+
+let laptop = {
+    name: "dell",
+    model: "Vostro 15 3000",
+    price: 200000,
+  };
+
+function insertLaptop(laptops, laptop) {
+    let stringify = JSON.stringify(laptop); // Convert it to String
+    localStorage.setItem(laptops, stringify); // Save it to LocalStorage
+    console.log(laptop);
+
+  }
+
+insertLaptop("laptops", laptop);
+
+// Qestion 7
+//Write a function that retrieves an object from localStorage. The function
+//should take one argument, which is a string representing the key used to
+//store the object. The function should return the object
+
+
+function getLaptop() {
+  
+    let laptopsList = localStorage.getItem("laptops"); // get from LocalStorage
+    console.log(laptop);
+
+}
+
+getLaptop();
+
+
